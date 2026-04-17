@@ -2,7 +2,7 @@ import SwiftUI
 
 struct SettingsView: View {
     @Environment(\.dismiss) private var dismiss
-    @State private var currentCondition = "sunny"
+    @State private var currentCondition = "snowy"
 
     var body: some View {
         NavigationStack {
@@ -34,13 +34,13 @@ struct SettingsView: View {
                         dismiss()
                     } label: {
                         Image(systemName: "xmark")
-                            
+                            .foregroundStyle(Color(.systemGray3))
                             .font(.title2.bold())
-                            .foregroundStyle(Color(.systemGray))
-                            .padding(5)
-                            
-                            
+                            .padding(10)
+                            .background(.ultraThinMaterial, in: Circle())
                     }
+                        
+    
                 }
             }
         }
